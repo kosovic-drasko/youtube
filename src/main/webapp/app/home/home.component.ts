@@ -33,4 +33,21 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.destroy$.next();
     this.destroy$.complete();
   }
+
+  id = 'V462IsOV3js';
+  playerVars = {
+    cc_lang_pref: 'en',
+  };
+  player: any;
+  savePlayer(player: any) {
+    this.player = player;
+  }
+
+  playVideo() {
+    this.player.playVideo();
+  }
+
+  pauseVideo() {
+    this.player.pauseVideo();
+  }
 }
